@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
 
+	import { resolve } from '$app/paths';
+
+
 	let showNav = false;
 	function toggleNav() {
 		showNav = !showNav;
@@ -19,7 +22,7 @@
 		<button class="nav-button" aria-label="Toggle navigation" on:click={toggleNav}>☰</button>
 		<ul class:open={showNav}>
 			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href={resolve("/")}>Home</a>
 			</li>
 			<!-- <li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
