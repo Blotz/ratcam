@@ -1,0 +1,126 @@
+@import '@fontsource/fira-mono';
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: #071115;
+        --background: #f9fcfd;
+        --primary: #4cabc7;
+        --secondary: #cc8edc;
+        --accent: #d16eb4;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #ecf5f9;
+        --background: #030608;
+        --primary: #3896b2;
+        --secondary: #612371;
+        --accent: #8f2d72;
+    }
+}
+
+main {
+    max-width: 800px; /* or whatever width suits your design */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+:root {
+    --font-body:
+    Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Fira Mono', monospace;
+
+    font-family: var(--font-body);
+    color: var(--text);
+    background-color: var(--background);
+}
+
+h1, h2 {
+    color: var(--primary);
+}
+h3, h4, h5, h6 {
+    color: var(--secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+p {
+    margin-bottom: 1em;
+}
+
+
+/* font */
+html, body {
+    height: 100%;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+}
+@media (max-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* links */
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* buttons */
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+}
+
+button:hover,
+input:hover {
+    border-color: var(--primary);
+}
+
+button:focus,
+input:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* transitions */
+button, input, a {
+    transition: all 0.2s ease;
+}
